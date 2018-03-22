@@ -16,7 +16,6 @@ const getM3U8Content = async ({ urlAddress }) => {
 
 const getDownloadList = ({ prefix, content }) => new Promise(async (resolve, reject) => {
   const parser = m3u8.createStream()
-  // const file = fs.createReadStream(path.resolve(__dirname, '../Act-ss-m3u8-hd/422f19ebaca34fbe91856173b6c39423/84bf34ee-2bb0-11e8-aefe-0242ac112a0fNone.m3u8'));
 
   // parser.on('item', function(item) {
   //   console.log(item)
