@@ -1,0 +1,16 @@
+#!/usr/bin/env node
+
+const argv = require('yargs').argv
+const dl = require('../lib').default
+
+process.nextTick(() => {
+  dl({
+    urlAddress: argv._[0],
+    output: argv.o || argv.output
+  }).then(() => {
+    console.log('Download success')
+  }).catch(e => {
+    console.log('Download fail')
+    console.log(e)
+  })
+})
